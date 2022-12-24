@@ -12,17 +12,13 @@ public class Order
     public Order(String id, String deliveryTime)
     {
         this.id = id;
-        this.deliveryTime = convert(deliveryTime);
-
-    }
-    public int convert(String deliveryTime)
-    {
         String[] arr = deliveryTime.split(":");
         int hr = Integer.parseInt(arr[0]);
         int min = Integer.parseInt(arr[1]);
+        this.deliveryTime = (hr*60) + min;;
 
-        return (hr*60) + min;
     }
+    
 
     public String getId() {
         return id;
