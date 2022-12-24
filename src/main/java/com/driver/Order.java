@@ -1,5 +1,10 @@
 package com.driver;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Order
 {
     private String id;
@@ -24,19 +29,4 @@ public class Order
         return (hr*60) + min;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public int getDeliveryTime() {
-        return deliveryTime;
-    }
-
-    public void setDeliveryTime(int deliveryTime) {
-        this.deliveryTime = deliveryTime;
-    }
 }
